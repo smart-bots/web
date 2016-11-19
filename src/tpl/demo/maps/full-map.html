@@ -1,0 +1,12 @@
+<section ng-controller="FullMapController" id="full-map-canvas" class="no-margin flex fullheight">
+
+  <div class="flex1">
+  <ui-gmap-google-map center="map.center"
+                      zoom="map.zoom">
+    <ui-gmap-markers models="markers"
+                     coords="'self'"
+                     icon="'icon'" />
+  </ui-gmap-google-map>
+  </div>
+
+</section>

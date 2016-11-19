@@ -1,0 +1,62 @@
+<section class="text-fields">
+  <div class="mdl-color--purple ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Validation</h3>
+      <h4 class="mdl-color-text--purple-100 m-b-20 no-m-t w100">The Material Design Lite (MDL) basic validation examples</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Validation elements</h3>
+          <p>An overview of basic validation types.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Basic validation rules</h2>
+          </div>
+          <div class="p-30">
+            <form>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="^\s*[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-_]+\.[a-zA-Z]{2,4}\s*$" id="sample1" />
+                <label class="mdl-textfield__label" for="sample1">Email validation</label>
+                <span class="mdl-textfield__error">Please supply a valid email address.</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+                <label class="mdl-textfield__label" for="sample2">Number validation</label>
+                <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="user" pattern="[A-Z,a-z, ]*" />
+                <label class="mdl-textfield__label" for="user">Letters and spaces validation</label>
+                <span class="mdl-textfield__error">Letters and spaces only</span>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="phone" />
+                <label class="mdl-textfield__label" for="phone">Digits validation</label>
+                <span class="mdl-textfield__error">Digits only</span>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>  
+</section>

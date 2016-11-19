@@ -1,0 +1,120 @@
+<div class="demo-drawer mdl-layout__drawer mdl-color-text--blue-grey-50 mdl-color--grey-900">
+  <header class="mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+
+    <div class="brand-logo">
+      <div class="logo">
+        <div class="foot1"></div>
+        <div class="foot2"></div>
+        <div class="foot3"></div>
+        <div class="foot4"></div>
+        <div class="foot5"></div>
+      </div>
+    </div>
+
+    <div class="clear">
+      <div class="f-left m-l-30 m-r-10">
+        <img src="img/icons/ballicons/workspace.svg" class="demo-avatar img-responsive">
+      </div>
+      <div class="f-left">
+        <h4 class="mdl-color-text--white m-t-5 no-m-b">Keyser Soze</h4>
+        <div class="mdl-color-text--blue-grey-400 f12"><i class=" material-icons f12">place</i> San Fransico, CA</div>
+      </div>
+    </div>
+    <div class="demo-avatar-dropdown">
+      <span>Keyser@soze.com</span>
+      <div class="mdl-layout-spacer"></div>
+      <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons f14">menu</i>
+      </button>
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+        <li class="mdl-menu__item">Elan@space.com</li>
+        <li class="mdl-menu__item">Cloud@strife.com</li>
+        <li class="mdl-menu__item">Add another account</li>
+      </ul>
+    </div>
+  </header>
+
+  <ul ml-menu close-others="false" class="demo-navigation mdl-navigation">
+    <ml-menu-item>
+      <a class="mdl-navigation__link" href="#/dashboard"><i class="mdl-color-text--blue-grey-400 material-icons">dashboard</i>Dashboard</a>
+    </ml-menu-item>
+    <ml-menu-item>
+      <a class="mdl-navigation__link" href="#/gallery"><i class="mdl-color-text--blue-grey-400 material-icons">recent_actors</i>Gallery</a>
+    </ml-menu-item>
+    <ml-menu-item>
+      <a class="mdl-navigation__link" href="#/chat"><i class="mdl-color-text--blue-grey-400 material-icons">chat</i>Chat APP</a>
+    </ml-menu-item>
+    <ml-menu-item>
+      <a class="mdl-navigation__link" href="#/todo"><i class="mdl-color-text--blue-grey-400 material-icons">format_list_numbered</i>Todo APP</a>
+    </ml-menu-item>
+    <ml-menu-group path="ui-elements">
+      <ml-menu-group-heading>
+        <i class="mdl-color-text--blue-grey-400 material-icons">photo</i>UI Elements
+      </ml-menu-group-heading>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/cards">Cards</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/typography">Typography</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/color">Color</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/grid">Grid</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/icons">Icons</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/buttons">Buttons</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/tabs">Tabs</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/menus">Menus</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/loading">Loading</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/tooltips">Tooltips</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/badges">Badges</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/ui-elements/footer">Footer</a></ml-menu-item>
+    </ml-menu-group>
+
+    <ml-menu-group path="forms">
+      <ml-menu-group-heading>
+        <i class="mdl-color-text--blue-grey-400 material-icons">format_align_left</i>Forms
+      </ml-menu-group-heading>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/forms/basic-forms">Basic forms</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/forms/advanced-elements">Advanced elements</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/forms/validation">Validation</a></ml-menu-item>
+    </ml-menu-group>
+
+    <ml-menu-group path="tables">
+      <ml-menu-group-heading>
+        <i class="mdl-color-text--blue-grey-400 material-icons">apps</i>Tables
+      </ml-menu-group-heading>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/tables/basic">Basic</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/tables/data">Data</a></ml-menu-item>
+    </ml-menu-group>
+
+    <ml-menu-item>
+      <a class="mdl-navigation__link" href="#/charts"><i class="mdl-color-text--blue-grey-400 material-icons">trending_up</i>Charts</a>
+    </ml-menu-item>
+
+    <ml-menu-group path="maps">
+      <ml-menu-group-heading>
+        <i class="mdl-color-text--blue-grey-400 material-icons">place</i>Maps
+      </ml-menu-group-heading>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/maps/full-map">Full map</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/maps/map-widgets">Map widgets</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/maps/vector-map">Vector map</a></ml-menu-item>
+    </ml-menu-group>
+
+    <ml-menu-group path="layouts">
+      <ml-menu-group-heading>
+        <i class="mdl-color-text--blue-grey-400 material-icons">chrome_reader_mode</i> Layouts
+      </ml-menu-group-heading>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/layouts/list">List example</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/layouts/edit">Edit example</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/layouts/sticky">Sticky example</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="#/layouts/navigations">Navigations</a></ml-menu-item>
+    </ml-menu-group>
+
+    <ml-menu-group path="extras">
+      <ml-menu-group-heading>
+        <i class="mdl-color-text--blue-grey-400 material-icons">mood</i> Extras
+      </ml-menu-group-heading>
+      <ml-menu-item><a class="mdl-navigation__link" href="pages/frontend-1.html" target="_blank">MDL Frontend 1</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="pages/frontend-2.html" target="_blank">MDL Frontend 2</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="pages/404.html" target="_blank">404</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="pages/login.html" target="_blank">Login</a></ml-menu-item>
+      <ml-menu-item><a class="mdl-navigation__link" href="pages/register.html" target="_blank">Register</a></ml-menu-item>
+    </ml-menu-group>
+
+  </ul>
+</div>

@@ -1,0 +1,51 @@
+// Core variables and mixins
+@import "bower_components/material-design-lite/src/_color-definitions.scss";
+
+@import "material-lite/mixins";
+@import "bower_components/sass-flex-mixin/_flex"; // compatibility for flex properties
+@import "material-lite/variables";
+@import "material-lite/variables-colors";
+@import "material-lite/colors";
+
+// Material Design Lite
+@import "bower_components/material-design-lite/src/material-design-lite";
+
+// Core CSS
+@import "material-lite/scaffolding";
+
+@import "material-lite/animations";
+@import "material-lite/base";
+@import "material-lite/buttons";
+@import "material-lite/tables";
+@import "material-lite/cards";
+@import "material-lite/component-animations";
+@import "material-lite/typography";
+@import "material-lite/navigation";
+@import "material-lite/pages";
+@import "material-lite/sticky";
+
+@import "material-lite/mdl-overrides";
+
+// Modules
+@import "material-lite/modules/chat";
+@import "material-lite/modules/svg-map";
+
+// Demo
+@import "demo/ui-elements/badges";
+@import "demo/ui-elements/color";
+@import "demo/ui-elements/grid";
+@import "demo/ui-elements/icons";
+@import "demo/ui-elements/typography";
+@import "demo/gallery";
+@import "demo/maps";
+@import "demo/navigations";
+
+@import "demo/forms/advanced-elements/upload";
+
+@import "demo/dashboard";
+
+// Plugins
+@import "plugins/material-lite-select2"; // Select2 theme
+@import "plugins/material-lite-pikaday"; // Pikaday theme
+
+

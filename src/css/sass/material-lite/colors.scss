@@ -1,0 +1,45 @@
+
+// color classes
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+
+    $color_type: str-replace($color_type, 'color-','');
+
+    @if $color_type == "base" {
+      .ml-color--#{$color_name} {
+        background-color: $color_value;
+        color: auto-text-color($color_value);
+      }
+      .ml-color-text--#{$color_name} {
+        color: $color_value;
+      }
+      .ml-color-border--#{$color_name} {
+        border-color: $color_value;
+      }
+    }
+    @else {
+      .ml-color--#{$color_name}-#{$color_type} {
+        background-color: $color_value;
+        color: auto-text-color($color_value);
+      }
+      .ml-color-text--#{$color_name}-#{$color_type} {
+        color: $color_value;
+      }
+      .ml-color-border--#{$color_name}-#{$color_type} {
+        border-color: $color_value;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $color, $color_value in $shades {
+  .#{$color} {
+    background-color: $color_value !important;
+    color: auto-text-color($color_value);
+  }
+  .#{$color}-text {
+    color: $color_value;
+  }
+}
+

@@ -1,0 +1,61 @@
+<div class="mdl-card m-b-20 mdl-shadow--0dp">
+  <div class="mdl-color--light-blue-300">
+
+    <div class="p-15">
+      <h4 class="no-margin mdl-color-text--white f20">TODO</h4>
+      <div class="f11">{{ todoService.count() }} todo's open</div>
+    </div>
+
+  </div>
+
+  <div class="mdl-card__menu">
+    <button id="clear-completed" class="mdl-button mdl-js-button mdl-button--icon mdl-color-text--white" ng-click="todoService.clearCompleted()">
+      <i class="material-icons">check</i>
+    </button>
+    <div class="mdl-tooltip" for="clear-completed">
+      Clear completed
+    </div>
+  </div>
+
+  <div class="mdl-card__supporting-text no-p-b">
+    <ul class="list-unstyled" ng-show="todos.length">
+      <li ng-repeat="todo in todos track by $id($index)" class="animate-repeat">
+        <span ng-click="todoService.toggleDone(todo)">
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+            <i class="material-icons" ng-class="{ 'mdl-color-text--green': todo.done }">done</i>
+          </button>
+          <span ng-class="{ strike: todo.done }">{{ todo.title }}</span>
+        </span>
+        <button class="mdl-button mdl-js-button mdl-button--icon f-right" ng-click="todoService.editTodo(todo)">
+          <i class="material-icons f15">edit</i>
+        </button>
+      </li>
+    </ul>
+
+    <div ng-show="!todos.length">
+      <p>Well done! No more todo's.</p>
+    </div>
+  </div>
+
+  <div class="mdl-card__actions">
+    <form ng-submit="todoService.saveTodo()" class="fullwidth">
+    <div class="mdl-grid mdl-grid--no-spacing">
+      <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
+        <div class="mdl-textfield mdl-js-textfield m-l-10">
+          <input ml-todo-focus="focusTodoInput" class="mdl-textfield__input" type="text" id="todo-title" ng-model="todoService.todo.title" placeholder="Title" />
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--pink mdl-js-ripple-effect fullwidth m-t-10">
+          {{ todoService.todo.editing ? 'Save' : 'Add' }}
+        </button>
+      </div>
+    </div>
+
+
+
+
+
+    </form>
+  </div>
+</div>

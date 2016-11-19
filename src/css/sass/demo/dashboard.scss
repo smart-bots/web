@@ -1,0 +1,98 @@
+
+.cards-top {
+  margin-top:-120px;
+  padding-bottom:0px;
+}
+
+#chart-area-1 {
+  .c3-line-Customers {
+    stroke: transparent !important;
+  }
+  .c3-circle {
+    display:none !important;
+  }
+}
+
+
+#chart-line-5 {
+  .tick line {
+    display: none;
+    fill: gray;
+  }
+  .domain {
+    display:none;
+  }
+}
+
+
+.c3-tooltip-container {
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.c3-tooltip {
+  opacity: 1;
+
+  .name span {
+    display: none;
+  }
+
+  td {
+    border: none;
+
+    &.value {
+      background-color: #EAEAEA;
+    }
+  }
+
+  tr {
+    border: none;
+
+    &:first-child {
+      display: none;
+    }
+  }
+}
+
+
+@include keyframes(toTop){
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.stats-2cols {
+  width:100%;
+  border-top: 1px #E4E4E4 solid;
+  border-bottom: 1px #E4E4E4 solid;
+  padding: 11px 0 15px 0 !important;
+  margin-bottom: 10px;
+
+  .mdl-cell:first-child {
+    border-right: 1px #E4E4E4 solid;
+  }
+
+}
+
+.stats-inchart {
+  background-color: rgb(243, 209, 220);
+  color: white;
+  min-height: inherit;
+}
+.stats-inchart--right-border {
+  border-right: 1px #F0F0F0 solid;
+}
+
+.ml-card-agenda {
+  border-left:20px solid rgba(0,0,0,0.2);
+
+  .ml-card-agenda__reminders{
+    border-bottom:1px rgba(255,255,255,0.3) solid;
+  }
+}
+
+.img-round-profile {
+  border-radius: 50%;
+  background: white;
+  padding:2px;
+  max-height:60px;
+}

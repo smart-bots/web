@@ -1,0 +1,184 @@
+<section class="menus">
+  <div class="mdl-color--teal ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Menus</h3>
+      <h4 class="mdl-color-text--teal-100 m-b-20 no-m-t w100">The Material Design Lite (MDL) menu component is a user interface element that allows users to select one of a number of options.</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">photo</i> Help</h3>
+          <p>The selection typically results in an action initiation, a setting change, or other observable effect. Menu options are always presented in sets of two or more, and options may be programmatically enabled or disabled as required.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="http://www.getmdl.io/components/index.html#menus-section">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  Menus
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Options</h2>
+          </div>
+          <div class="p-30">
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+
+                <div class="mdl-card mdl-shadow--2dp t-right">
+                  <div class="mdl-card__title mdl-card--expand block">
+                    <h2 class="mdl-card__title-text block fullwidth">Update</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Click the 3 dots to open the menu.
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border block">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      View Updates
+                    </a>
+                  </div>
+                  <div class="mdl-card__menu mdl-card__menu-left">
+                    <!-- Left aligned menu below button -->
+                    <button id="demo-menu-lower-left"
+                            class="mdl-button mdl-js-button mdl-button--icon">
+                      <i class="material-icons">more_vert</i>
+                    </button>
+
+                    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                        for="demo-menu-lower-left">
+                      <li class="mdl-menu__item">Some Action</li>
+                      <li class="mdl-menu__item">Another Action</li>
+                      <li disabled class="mdl-menu__item">Disabled Action</li>
+                      <li class="mdl-menu__item">Yet Another Action</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+
+                <div class="mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title mdl-card--expand block">
+                    <h2 class="mdl-card__title-text">Update</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Click the 3 dots to open the menu.
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border block">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      View Updates
+                    </a>
+                  </div>
+                  <div class="mdl-card__menu">
+                    <!-- Right aligned menu below button -->
+                    <button id="demo-menu-lower-right"
+                            class="mdl-button mdl-js-button mdl-button--icon">
+                      <i class="material-icons">more_vert</i>
+                    </button>
+
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                        for="demo-menu-lower-right">
+                      <li class="mdl-menu__item">Some Action</li>
+                      <li class="mdl-menu__item">Another Action</li>
+                      <li disabled class="mdl-menu__item">Disabled Action</li>
+                      <li class="mdl-menu__item">Yet Another Action</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End grid -->
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+
+                <div class="mdl-card mdl-shadow--2dp t-right">
+                  <div class="mdl-card__title mdl-card--expand block">
+                    <h2 class="mdl-card__title-text block fullwidth">Update</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Click the 3 dots to open the menu.
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border block">
+                    <div class="f-left">
+                      <!-- Left aligned menu on top of button  -->
+                      <button id="demo-menu-top-left"
+                              class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                      </button>
+
+                      <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+                          for="demo-menu-top-left">
+                        <li class="mdl-menu__item">Some Action</li>
+                        <li class="mdl-menu__item">Another Action</li>
+                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                        <li class="mdl-menu__item">Yet Another Action</li>
+                      </ul>
+                    </div>
+
+                    <div class="f-right">
+                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        View Updates
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+
+                <div class="mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title mdl-card--expand block">
+                    <h2 class="mdl-card__title-text">Update</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Click the 3 dots to open the menu.
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border block">
+                    <div class="f-right p-r-5">
+                      <!-- Right aligned menu on top of button  -->
+                      <button id="demo-menu-top-right"
+                              class="mdl-button mdl-js-button mdl-button--icon">
+                        <i class="material-icons">more_vert</i>
+                      </button>
+
+                      <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                          for="demo-menu-top-right">
+                        <li class="mdl-menu__item">Some Action</li>
+                        <li class="mdl-menu__item">Another Action</li>
+                        <li disabled class="mdl-menu__item">Disabled Action</li>
+                        <li class="mdl-menu__item">Yet Another Action</li>
+                      </ul>
+                    </div>
+
+                    <div class="f-left">
+                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                        View Updates
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End grid -->
+
+          </div><!-- End .p-30 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

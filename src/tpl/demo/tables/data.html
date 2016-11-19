@@ -1,0 +1,75 @@
+
+<section ng-controller="TablesDataController" class="tables-data">
+  <div class="mdl-color--blue-grey ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Data tables</h3>
+      <h4 class="mdl-color-text--blue-grey-100 m-b-20 no-m-t w100">Work with large data sets in tables with NG-Table</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class=" material-icons f-left m-r-5">dvr</i> ngTable</h3>
+          <p>ngTable allows you to interact with your tables.
+            It supports sorting, filtering and pagination. Header rows with titles and filters are automatically generated during compilation</p>
+        </div>
+
+        <div class="table-search">
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <input type="text" ng-model="tableParams.filter()['search']" class="mdl-textfield__input" placeholder="Search data" autofocus />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col  mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">{{data.length}} rows</h2>
+          </div>
+
+
+          <table ng-table="tableParams" template-pagination="custom/pager" class="table mdl-data-table fullwidth">
+            <tr ng-repeat="item in $data">
+              <td width="50" ng-bind-html="item.icon">{{item.icon}}</td>
+              <td class="text-left" data-title="'firstname'" filter="{ 'firstname': 'text' }" sortable="'firstname'">{{item.firstname}}</td>
+              <td data-title="'lastname'" sortable="'lastname'">{{item.lastname}}</td>
+            </tr>
+          </table>
+
+          <script type="text/ng-template" id="custom/pager">
+            <div ng-if="params.data.length" class="ml-data-table-pager p-10">
+              <div ng-if="params.settings().counts.length" class="f-right">
+                <button ng-class="{'active':params.count() == 10}" ng-click="params.count(10)" class="mdl-button">10</button>
+                <button ng-class="{'active':params.count() == 25}" ng-click="params.count(25)" class="mdl-button">25</button>
+                <button ng-class="{'active':params.count() == 50}" ng-click="params.count(50)" class="mdl-button">50</button>
+                <button ng-class="{'active':params.count() == 100}" ng-click="params.count(100)" class="mdl-button">100</button>
+              </div>
+              <span ng-repeat="page in pages"
+                  ng-class="{'disabled': !page.active, 'previous': page.type == 'prev', 'next': page.type == 'next'}"
+                  ng-switch="page.type">
+                <button ng-switch-when="prev" ng-click="params.page(page.number)" class="mdl-button">&laquo;</button>
+                <button ng-switch-when="first" ng-click="params.page(page.number)" class="mdl-button"><span ng-bind="page.number"></span></button>
+                <button ng-switch-when="page" ng-click="params.page(page.number)" class="mdl-button"><span ng-bind="page.number"></span></button>
+                <button ng-switch-when="more" ng-click="params.page(page.number)" class="mdl-button">&#8230;</button>
+                <button ng-switch-when="last" ng-click="params.page(page.number)" class="mdl-button"><span ng-bind="page.number"></span></button>
+                <button ng-switch-when="next" ng-click="params.page(page.number)" class="mdl-button">&raquo;</button>
+              </span>
+            </div>
+          </script>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>

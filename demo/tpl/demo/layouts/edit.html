@@ -1,0 +1,71 @@
+<section ng-controller="MainController">
+
+  <div class="mdl-color--cyan ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">User management</h3>
+      <h4 class="mdl-color-text--cyan-100 m-b-20 no-m-t w100">Manage all the users on your SAAS platform</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class=" material-icons f-left m-r-5">dvr</i> Edit user</h3>
+          <p>Change the data from the user in the form and push save</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li><a href="">
+                <i class="material-icons m-r-5 f11">save</i>
+                Save changes
+              </a></li>
+              <li><a href="">
+                <i class="material-icons m-r-5 f11">mail</i>
+                Email new password
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col  mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title ">
+            <h2 class="mdl-card__title-text">User data</h2>
+          </div>
+          <div class="p-30">
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                <input class="mdl-textfield__input" type="text" id="sample3" />
+                <label class="mdl-textfield__label" for="sample3">Username</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                <input class="mdl-textfield__input" type="password" id="sample3" />
+                <label class="mdl-textfield__label" for="sample3">Password</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                <input class="mdl-textfield__input" type="email" id="sample3" />
+                <label class="mdl-textfield__label" for="sample3">Email</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+                <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+              </div>
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                Save user
+              </button>
+              <button type="reset" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                Reset
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

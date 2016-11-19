@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Bryanna Charnette",
+    "messages": [
+      {
+        "me": false,
+        "text": "Hi can you help me out?",
+        "datetime": "2015-08-05T14:12:05+02:00"
+      },
+      {
+        "me": true,
+        "text": "Sure, what can I help you with?",
+        "datetime": "2015-08-05T14:13:05+02:00"
+      },
+      {
+        "me": false,
+        "text": "I have a discount code but its not working, its supposed to be valid :(",
+        "datetime": "2015-08-05T14:15:18+02:00"
+      },
+      {
+        "me": true,
+        "text": "Alright let me check that for you. Could you give me the discount code?",
+        "datetime": "2015-08-05T14:15:55+02:00"
+      },
+      {
+        "me": false,
+        "text": "Yes, thats XDFGR3A",
+        "datetime": "2015-08-05T14:15:55+02:00"
+      },
+      {
+        "me": true,
+        "text": "Ok just a sec.",
+        "datetime": "2015-08-05T14:16:12+02:00"
+      },
+      {
+        "me": true,
+        "text": "Thanks for waiting. There seems to have been a bug in the system. It should be resolved. Could you try again?",
+        "datetime": "2015-08-05T14:22:44+02:00"
+      },
+      {
+        "me": false,
+        "text": "Great its working! Thank you!",
+        "datetime": "2015-08-05T14:29:48+02:00"
+      }
+    ]
+  },
+  {
+    "name": "Madison Colin",
+    "messages": [
+      {
+        "me": false,
+        "text": "I have just ordered something with you but I'd like to add something to my order. Is that possible?",
+        "datetime": "2015-07-01T14:13:05+02:00"
+      },
+      {
+        "me": true,
+        "text": "Thats no problem, could you give me your order number and the product you'd like to add?",
+        "datetime": "2015-07-01T14:14:05+02:00"
+      },
+      {
+        "me": false,
+        "text": "The order number is: 0420 and the product i'd like to add is: 23553",
+        "datetime": "2015-07-01T14:15:08+02:00"
+      },
+      {
+        "me": true,
+        "text": "Ok I'll get that sorted out for you.",
+        "datetime": "2015-07-01T14:15:55+02:00"
+      },
+      {
+        "me": false,
+        "text": "Thanks!",
+        "datetime": "2015-07-01T14:16:12+02:00"
+      }
+    ]
+  }
+]

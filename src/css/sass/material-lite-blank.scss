@@ -1,0 +1,25 @@
+// Core variables and mixins
+@import "bower_components/material-design-lite/src/_color-definitions.scss";
+@import "material-lite/mixins";
+@import "material-lite/variables";
+@import "material-lite/variables-colors";
+@import "material-lite/colors";
+
+// Material Design Lite
+@import "bower_components/material-design-lite/src/material-design-lite";
+
+// Core CSS
+@import "material-lite/scaffolding";
+
+@import "material-lite/animations";
+@import "material-lite/base";
+@import "material-lite/buttons";
+@import "material-lite/tables";
+@import "material-lite/cards";
+@import "material-lite/component-animations";
+@import "material-lite/typography";
+@import "material-lite/navigation";
+@import "material-lite/pages";
+@import "material-lite/sticky";
+
+@import "material-lite/mdl-overrides";

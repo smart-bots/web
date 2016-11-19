@@ -1,0 +1,226 @@
+<section ng-controller="ChartsController">
+  <div class="mdl-color--grey-800 ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Charts</h3>
+      <h4 class="mdl-color-text--white m-b-20 no-m-t w100">
+
+        Chart examples based on c3js and AngularJS directives
+
+      </h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class=" material-icons f-left m-r-5">trending_up</i> Documentation</h3>
+
+          <p>
+          These charts are based on C3
+          and can be created using directives.
+          </p>
+
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li><a target="_blank" href="http://c3js.org/">
+                <i class="material-icons m-r-5 f11">link</i>
+                C3
+              </a></li>
+              <li><a target="_blank" href="https://github.com/jettro/c3-angular-directive">
+                <i class="material-icons m-r-5 f11">link</i>
+                c3-angular-directive
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col  mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Line chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="line-chart">
+              <chart-column column-id="Data 1"
+                            column-values="30,200,100,400,150,250,50"
+                            column-type="line"/>
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Area chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="area-chart">
+              <chart-column column-id="Data 2"
+                            column-values="140,100,150,200,150,0"
+                            column-type="area-spline"/>
+              <chart-column column-id="Data 1"
+                            column-values="300,350,300,0"
+                            column-type="area"/>
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Gauge charts</h2>
+          </div>
+          <div class="p-20">
+
+            <div class="mdl-grid mdl-grid--no-spacing">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <c3chart bindto-id="gauge-plot1-chart">
+                  <chart-column column-id="Data 1"
+                                column-values="70"
+                                column-type="gauge"/>
+                  <chart-gauge min="50"
+                               max="75"
+                               units=" hours"
+                               width="39"/>
+                </c3chart>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <c3chart bindto-id="gauge-plot2-chart">
+                  <chart-column column-id="Data 1"
+                                column-values="70"
+                                column-type="gauge"/>
+                  <chart-gauge min="20"
+                               max="75"
+                               units=" hours"
+                               width="20"/>
+                  <chart-colors color-pattern="#00bcd4" />
+                </c3chart>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                <c3chart bindto-id="gauge-plot3-chart">
+                  <chart-column column-id="Data 1"
+                                column-values="70"
+                                column-type="gauge"/>
+                  <chart-gauge min="10"
+                               max="75"
+                               units=" hours"
+                               width="5"/>
+                  <chart-colors color-pattern="pink" />
+                </c3chart>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Bar chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="bar-chart">
+              <chart-column column-id="Data 3"
+                            column-values="130,-150,200,300,-200,100"
+                            column-type="bar"/>
+              <chart-column column-id="Data 2"
+                            column-values="130,100,140,200,150,50"
+                            column-type="bar"/>
+              <chart-column column-id="Data 1"
+                            column-values="30,200,100,400,150,250"
+                            column-type="bar"/>
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Area Step chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="step-chart">
+              <chart-column column-id="Data 2"
+                            column-values="130,100,140,200,150,50"
+                            column-type="area-step"/>
+              <chart-column column-id="Data 1"
+                            column-values="300,350,300,0,0,100"
+                            column-type="step"/>
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Scatter chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="scatter-plot-chart">
+              <chart-column column-id="Data 2"
+                            column-values="2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8"
+                            column-type="scatter"/>
+              <chart-column column-id="Data 2 x"
+                            column-values="3.3, 2.7, 3.0, 2.9, 3.0, 3.0, 2.5, 2.9, 2.5, 3.6, 3.2, 2.7, 3.0, 2.5, 2.8, 3.2, 3.0, 3.8, 2.6, 2.2, 3.2, 2.8, 2.8, 2.7, 3.3, 3.2, 2.8, 3.0, 2.8, 3.0, 2.8, 3.8, 2.8, 2.8, 2.6, 3.0, 3.4, 3.1, 3.0, 3.1, 3.1, 3.1, 2.7, 3.2, 3.3, 3.0, 2.5, 3.0, 3.4, 3.0" />
+              <chart-column column-id="Data 1"
+                            column-values="1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3"
+                            column-type="scatter"/>
+              <chart-column column-id="Data 1 x"
+                            column-values="3.2, 3.2, 3.1, 2.3, 2.8, 2.8, 3.3, 2.4, 2.9, 2.7, 2.0, 3.0, 2.2, 2.9, 2.9, 3.1, 3.0, 2.7, 2.2, 2.5, 3.2, 2.8, 2.5, 2.8, 2.9, 3.0, 2.8, 3.0, 2.9, 2.6, 2.4, 2.4, 2.7, 2.7, 3.0, 3.4, 3.1, 2.3, 3.0, 2.5, 2.6, 3.0, 2.6, 2.3, 2.7, 3.0, 2.9, 2.9, 2.5, 2.8" />
+              <chart-axes values-xs="Data 1:Data 1 x,Data 2:Data 2 x" />
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Pie chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="pie-chart">
+              <chart-column column-id="Data 3"
+                            column-values="130"
+                            column-type="pie"/>
+              <chart-column column-id="Data 2"
+                            column-values="120"
+                            column-type="pie"/>
+              <chart-column column-id="Data 1"
+                            column-values="30"
+                            column-type="pie"/>
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--1dp m-b-30">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Donut chart</h2>
+          </div>
+          <div class="p-20">
+            <c3chart bindto-id="donut-chart">
+              <chart-column column-id="Data 3"
+                            column-values="7"
+                            column-type="donut"/>
+              <chart-column column-id="Data 2"
+                            column-values="36"
+                            column-type="donut"/>
+              <chart-column column-id="Data 1"
+                            column-values="56"
+                            column-type="donut"/>
+              <chart-colors color-pattern="{{color_pattern}}"/>
+            </c3chart>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

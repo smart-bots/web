@@ -1,0 +1,109 @@
+.page {
+  bottom:0;
+  position:absolute;
+  top:0;
+  width:calc(100% - 240px);
+  margin-left:240px;
+  margin-top: 64px;
+}
+
+.page.ng-leave {
+  z-index:3;
+  animation: fadeOut .5s both ease-in;
+
+  .ml-card-holder {
+    animation: fadeOutDown .5s both ease-in;
+  }
+
+  .ml-header h3 {
+    animation: fadeOutLeft 0.4s both ease-in;
+  }
+  .ml-header h4 {
+    animation: fadeOutLeft 0.4s both ease-in;
+    animation-delay: 0.1s;
+  }
+}
+
+.page.ng-enter {
+  z-index:4;
+  opacity: 0;
+  animation:fadeIn .5s both ease-in;
+
+  .ml-card-holder {
+    animation: fadeInUp .5s both ease-in;
+  }
+
+  .ml-header h3 {
+    animation: fadeInLeft 0.4s both ease-in;
+  }
+  .ml-header h4 {
+    animation: fadeInLeft 0.4s both ease-in;
+    animation-delay: 0.1s;
+  }
+}
+
+
+@include keyframes(fadeOut){
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fadeOutDown){
+  0% {
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fadeIn){
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeInUp){
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@include keyframes(fadeInLeft){
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeOutLeft){
+  100% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+}

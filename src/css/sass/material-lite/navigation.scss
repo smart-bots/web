@@ -1,0 +1,38 @@
+.mdl-layout__drawer {
+  .mdl-navigation {
+    li {
+      position: relative;
+
+      &.active .mdl-navigation__link {
+        //border-left: 3px rgb(139, 195, 74) solid;
+        padding-left: 20px;
+      }
+      li.active .mdl-navigation__link {
+        padding-left: 48px;
+
+
+      }
+
+      &.active a:after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-width: 5px;
+        border-radius: 50%;
+        border-color: #8BC161;
+        border-style: solid;
+        top: 12px;
+        left: 30px;
+      }
+
+      line-height: 0;
+      flex-shrink: 0;
+    }
+
+    li li a.mdl-navigation__link {
+      padding: 8px 20px 8px 48px;
+    }
+
+  }
+}

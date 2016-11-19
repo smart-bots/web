@@ -1,0 +1,66 @@
+[
+  {
+    "src": "img/photos/1.jpg",
+    "title": "photo 1",
+    "type": "photo",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 12:48:04",
+    "tags": "1280x1024,jpg,hdr"
+  },
+  {
+    "src": "img/photos/2.jpg",
+    "title": "photo 2",
+    "type": "photo",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 13:48:04",
+    "tags": "1280x1024,jpg,hdr"
+  },
+  {
+    "src": "img/photos/3.jpg",
+    "title": "video 1",
+    "type": "video",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 14:48:04",
+    "tags": "1024x768,mkv"
+  },
+  {
+    "src": "img/photos/4.jpg",
+    "title": "photo 3",
+    "type": "photo",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 15:48:04",
+    "tags": "800x600,jpg,hdr"
+  },
+  {
+    "src": "img/photos/5.jpg",
+    "title": "photo 4",
+    "type": "photo",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 12:48:04",
+    "tags": "1280x1024,jpg,hdr"
+  },
+  {
+    "src": "img/photos/6.jpg",
+    "title": "photo 5",
+    "type": "photo",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 13:48:04",
+    "tags": "1280x1024,jpg,hdr"
+  },
+  {
+    "src": "img/photos/7.jpg",
+    "title": "video 2",
+    "type": "video",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 14:48:04",
+    "tags": "1024x768,mkv"
+  },
+  {
+    "src": "img/photos/8.jpg",
+    "title": "photo 6",
+    "type": "photo",
+    "desc": "Lorum ipsum something something",
+    "datetime": "2015-08-05 15:48:04",
+    "tags": "800x600,jpg,hdr"
+  }
+]

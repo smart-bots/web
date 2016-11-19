@@ -1,0 +1,353 @@
+// Utility Color Classes
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+
+$red: (
+  "color-50":  #FFEBEE,
+  "color-100":  #FFCDD2,
+  "color-200":  #EF9A9A,
+  "color-300":  #E57373,
+  "color-400":  #EF5350,
+  "color-base":       #F44336,
+  "color-600":   #E53935,
+  "color-700":   #D32F2F,
+  "color-800":   #C62828,
+  "color-900":   #B71C1C,
+  "color-A100":    #FF8A80,
+  "color-A200":    #FF5252,
+  "color-A300":    #FF1744,
+  "color-A400":    #D50000
+);
+
+$pink: (
+  "color-50":  #fce4ec,
+  "color-100":  #f8bbd0,
+  "color-200":  #f48fb1,
+  "color-300":  #f06292,
+  "color-400":  #ec407a,
+  "color-base":       #e91e63,
+  "color-600":   #d81b60,
+  "color-700":   #c2185b,
+  "color-800":   #ad1457,
+  "color-900":   #880e4f,
+  "color-A100":    #ff80ab,
+  "color-A200":    #ff4081,
+  "color-A300":    #f50057,
+  "color-A400":    #c51162
+);
+
+$purple: (
+  "color-50":  #f3e5f5,
+  "color-100":  #e1bee7,
+  "color-200":  #ce93d8,
+  "color-300":  #ba68c8,
+  "color-400":  #ab47bc,
+  "color-base":       #9c27b0,
+  "color-600":   #8e24aa,
+  "color-700":   #7b1fa2,
+  "color-800":   #6a1b9a,
+  "color-900":   #4a148c,
+  "color-A100":    #ea80fc,
+  "color-A200":    #e040fb,
+  "color-A300":    #d500f9,
+  "color-A400":    #aa00ff
+);
+
+$deep-purple: (
+  "color-50":  #ede7f6,
+  "color-100":  #d1c4e9,
+  "color-200":  #b39ddb,
+  "color-300":  #9575cd,
+  "color-400":  #7e57c2,
+  "color-base":       #673ab7,
+  "color-600":   #5e35b1,
+  "color-700":   #512da8,
+  "color-800":   #4527a0,
+  "color-900":   #311b92,
+  "color-A100":    #b388ff,
+  "color-A200":    #7c4dff,
+  "color-A300":    #651fff,
+  "color-A400":    #6200ea
+);
+
+$indigo: (
+  "color-50":  #e8eaf6,
+  "color-100":  #c5cae9,
+  "color-200":  #9fa8da,
+  "color-300":  #7986cb,
+  "color-400":  #5c6bc0,
+  "color-base":       #3f51b5,
+  "color-600":   #3949ab,
+  "color-700":   #303f9f,
+  "color-800":   #283593,
+  "color-900":   #1a237e,
+  "color-A100":    #8c9eff,
+  "color-A200":    #536dfe,
+  "color-A300":    #3d5afe,
+  "color-A400":    #304ffe
+);
+
+$blue: (
+  "color-50":  #E3F2FD,
+  "color-100":  #BBDEFB,
+  "color-200":  #90CAF9,
+  "color-300":  #64B5F6,
+  "color-400":  #42A5F5,
+  "color-base":       #2196F3,
+  "color-600":   #1E88E5,
+  "color-700":   #1976D2,
+  "color-800":   #1565C0,
+  "color-900":   #0D47A1,
+  "color-A100":    #82B1FF,
+  "color-A200":    #448AFF,
+  "color-A300":    #2979FF,
+  "color-A400":    #2962FF
+);
+
+$light-blue: (
+  "color-50":  #e1f5fe,
+  "color-100":  #b3e5fc,
+  "color-200":  #81d4fa,
+  "color-300":  #4fc3f7,
+  "color-400":  #29b6f6,
+  "color-base":       #03a9f4,
+  "color-600":   #039be5,
+  "color-700":   #0288d1,
+  "color-800":   #0277bd,
+  "color-900":   #01579b,
+  "color-A100":    #80d8ff,
+  "color-A200":    #40c4ff,
+  "color-A300":    #00b0ff,
+  "color-A400":    #0091ea
+);
+
+$cyan: (
+  "color-50":  #e0f7fa,
+  "color-100":  #b2ebf2,
+  "color-200":  #80deea,
+  "color-300":  #4dd0e1,
+  "color-400":  #26c6da,
+  "color-base":       #00bcd4,
+  "color-600":   #00acc1,
+  "color-700":   #0097a7,
+  "color-800":   #00838f,
+  "color-900":   #006064,
+  "color-A100":    #84ffff,
+  "color-A200":    #18ffff,
+  "color-A300":    #00e5ff,
+  "color-A400":    #00b8d4
+);
+
+$teal: (
+  "color-50":  #e0f2f1,
+  "color-100":  #b2dfdb,
+  "color-200":  #80cbc4,
+  "color-300":  #4db6ac,
+  "color-400":  #26a69a,
+  "color-base":       #009688,
+  "color-600":   #00897b,
+  "color-700":   #00796b,
+  "color-800":   #00695c,
+  "color-900":   #004d40,
+  "color-A100":    #a7ffeb,
+  "color-A200":    #64ffda,
+  "color-A300":    #1de9b6,
+  "color-A400":    #00bfa5
+);
+
+$green: (
+  "color-50":  #E8F5E9,
+  "color-100":  #C8E6C9,
+  "color-200":  #A5D6A7,
+  "color-300":  #81C784,
+  "color-400":  #66BB6A,
+  "color-base":       #4CAF50,
+  "color-600":   #43A047,
+  "color-700":   #388E3C,
+  "color-800":   #2E7D32,
+  "color-900":   #1B5E20,
+  "color-A100":    #B9F6CA,
+  "color-A200":    #69F0AE,
+  "color-A300":    #00E676,
+  "color-A400":    #1ED068
+);
+
+$light-green: (
+  "color-50":  #f1f8e9,
+  "color-100":  #dcedc8,
+  "color-200":  #c5e1a5,
+  "color-300":  #aed581,
+  "color-400":  #9ccc65,
+  "color-base":       #8bc34a,
+  "color-600":   #7cb342,
+  "color-700":   #689f38,
+  "color-800":   #558b2f,
+  "color-900":   #33691e,
+  "color-A100":    #ccff90,
+  "color-A200":    #b2ff59,
+  "color-A300":    #76ff03,
+  "color-A400":    #64dd17
+);
+
+$lime: (
+  "color-50":  #f9fbe7,
+  "color-100":  #f0f4c3,
+  "color-200":  #e6ee9c,
+  "color-300":  #dce775,
+  "color-400":  #d4e157,
+  "color-base":       #cddc39,
+  "color-600":   #c0ca33,
+  "color-700":   #afb42b,
+  "color-800":   #9e9d24,
+  "color-900":   #827717,
+  "color-A100":    #f4ff81,
+  "color-A200":    #eeff41,
+  "color-A300":    #c6ff00,
+  "color-A400":    #aeea00
+);
+
+$yellow: (
+  "color-50":  #fffde7,
+  "color-100":  #fff9c4,
+  "color-200":  #fff59d,
+  "color-300":  #fff176,
+  "color-400":  #ffee58,
+  "color-base":       #ffeb3b,
+  "color-600":   #fdd835,
+  "color-700":   #fbc02d,
+  "color-800":   #f9a825,
+  "color-900":   #f57f17,
+  "color-A100":    #ffff8d,
+  "color-A200":    #ffff00,
+  "color-A300":    #ffea00,
+  "color-A400":    #ffd600
+);
+
+$amber: (
+  "color-50":  #fff8e1,
+  "color-100":  #ffecb3,
+  "color-200":  #ffe082,
+  "color-300":  #ffd54f,
+  "color-400":  #ffca28,
+  "color-base":       #ffc107,
+  "color-600":   #ffb300,
+  "color-700":   #ffa000,
+  "color-800":   #ff8f00,
+  "color-900":   #ff6f00,
+  "color-A100":    #ffe57f,
+  "color-A200":    #ffd740,
+  "color-A300":    #ffc400,
+  "color-A400":    #ffab00
+);
+
+$orange: (
+  "color-50":  #fff3e0,
+  "color-100":  #ffe0b2,
+  "color-200":  #ffcc80,
+  "color-300":  #ffb74d,
+  "color-400":  #ffa726,
+  "color-base":       #ff9800,
+  "color-600":   #fb8c00,
+  "color-700":   #f57c00,
+  "color-800":   #ef6c00,
+  "color-900":   #e65100,
+  "color-A100":    #ffd180,
+  "color-A200":    #ffab40,
+  "color-A300":    #ff9100,
+  "color-A400":    #ff6d00
+);
+
+$deep-orange: (
+  "color-50":  #fbe9e7,
+  "color-100":  #ffccbc,
+  "color-200":  #ffab91,
+  "color-300":  #ff8a65,
+  "color-400":  #ff7043,
+  "color-base":       #ff5722,
+  "color-600":   #f4511e,
+  "color-700":   #e64a19,
+  "color-800":   #d84315,
+  "color-900":   #bf360c,
+  "color-A100":    #ff9e80,
+  "color-A200":    #ff6e40,
+  "color-A300":    #ff3d00,
+  "color-A400":    #dd2c00
+);
+
+$brown: (
+  "color-50":  #efebe9,
+  "color-100":  #d7ccc8,
+  "color-200":  #bcaaa4,
+  "color-300":  #a1887f,
+  "color-400":  #8d6e63,
+  "color-base":       #795548,
+  "color-600":   #6d4c41,
+  "color-700":   #5d4037,
+  "color-800":   #4e342e,
+  "color-900":   #3e2723
+);
+
+$blue-grey: (
+  "color-50":  #eceff1,
+  "color-100":  #cfd8dc,
+  "color-200":  #b0bec5,
+  "color-300":  #90a4ae,
+  "color-400":  #78909c,
+  "color-base":       #607d8b,
+  "color-600":   #546e7a,
+  "color-700":   #455a64,
+  "color-800":   #37474f,
+  "color-900":   #263238
+);
+
+$grey: (
+  "color-50":  #fafafa,
+  "color-100":  #f5f5f5,
+  "color-200":  #eeeeee,
+  "color-300":  #e0e0e0,
+  "color-400":  #bdbdbd,
+  "color-base":       #9e9e9e,
+  "color-600":   #757575,
+  "color-700":   #616161,
+  "color-800":   #424242,
+  "color-900":   #212121
+);
+
+$shades: (
+  "color-black":      #000000,
+  "color-white":      #FFFFFF
+);
+
+$colors: (
+  "red": $red,
+  "pink": $pink,
+  "purple": $purple,
+  "deep-purple": $deep-purple,
+  "indigo": $indigo,
+  "blue": $blue,
+  "light-blue": $light-blue,
+  "cyan": $cyan,
+  "teal": $teal,
+  "green": $green,
+  "light-green": $light-green,
+  "lime": $lime,
+  "yellow": $yellow,
+  "amber": $amber,
+  "orange": $orange,
+  "deep-orange": $deep-orange,
+  "brown": $brown,
+  "blue-grey": $blue-grey,
+  "grey": $grey,
+  "shades": $shades
+);
+
+
+@function color($color, $type: 'base') {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}

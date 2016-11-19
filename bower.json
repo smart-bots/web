@@ -1,0 +1,39 @@
+{
+  "name": "smartbots-web-client",
+  "description": "--------------",
+  "main": "Gruntfile.js",
+  "authors": [
+    "h2dvnnet <h2dvnnet@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "http://smart-bots.xyz",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "angular-sanitize": "~1.4.5",
+    "angular-ui-select": "0.13",
+    "angular-local-storage": "0.2.3",
+    "angular-google-maps": "~2.2.1",
+    "angular-simple-logger": ">=0.0.1",
+    "angulargrid": "master",
+    "ng-file-upload": "9.1.2",
+    "ng-wig": "2.2.1",
+    "pikaday-angular": "2.0.0",
+    "moment": "2.10.6",
+    "c3-angular": "~0.7.1",
+    "font-awesome": "4.4.0",
+    "animate.css": "3.4.0",
+    "material-design-lite": "1.0.6",
+    "ng-table": "~0.8.3",
+    "sass-flex-mixin": "~1.0.3"
+  }
+}

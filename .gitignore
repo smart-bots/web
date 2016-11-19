@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+node_modules
+bower_components
+.sass-cache
+.tmp
+.idea
+src/css/material-lite-demo.css
+src/css/material-lite-demo.css.map
+src/css/material-lite-blank.css
+src/pages/css/material.min.css
+src/pages/css/helpers.css
+src/pages/js/material.min.js
+_old

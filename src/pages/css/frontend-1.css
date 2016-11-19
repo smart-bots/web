@@ -1,0 +1,87 @@
+body {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+.mdl-layout__header-row {
+    padding: 0 40px 0 65px;
+}
+
+.mdl-layout__drawer-button i {
+    color: rgb(255,64,129);
+}
+
+.mdl-textfield__label:after {
+    background-color: rgb(33, 150, 243);
+}
+
+.mdl-mega-footer--social-btn {
+    background-color: rgb(45, 45, 45);
+}
+.mdl-mega-footer--social-btn i {
+    font-size: 24px;
+}
+
+.ml-link-list {
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+.ml-link-list li {
+    border-bottom: 1px solid #ebebeb;
+}
+.ml-link-list li a {
+    padding: 3px;
+    display: block;
+    text-decoration: none;
+}
+.ml-link-list li a:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+.demo-main {
+    margin-top: -35vh;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.demo-ribbon {
+    width: 100%;
+    height: 40vh;
+
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.demo-content {
+    border-radius: 2px;
+    padding: 50px;
+    margin-bottom: 80px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    min-height: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 100px;
+}

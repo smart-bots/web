@@ -1,0 +1,20 @@
+.ml-table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+
+.ml-table-bordered > thead > tr > td,
+.ml-table-bordered > tbody > tr > td  {
+  border: 1px solid #F0F0F0;
+}
+
+.ml-data-table-pager {
+  .mdl-button {
+    min-width: auto;
+  }
+}
+
+
+.ng-table th.sortable.sort-desc, .ng-table th.sortable.sort-asc {
+  background-color: inherit;
+}

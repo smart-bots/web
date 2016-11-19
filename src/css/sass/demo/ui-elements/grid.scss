@@ -1,0 +1,29 @@
+.demo-grid-ruler,
+.demo-grid-1,
+.demo-grid-2,
+.demo-grid-3,
+.demo-grid-4 {
+  .mdl-cell {
+    box-sizing: border-box;
+    background-color: #BDBDBD;
+    height: 200px;
+    padding-left: 8px !important;
+    padding-top: 4px !important;
+    color: white;
+  }
+}
+
+.demo-grid-align > .mdl-cell {
+  height: 200px;
+}
+
+.demo-grid-4 {
+  height: 200px;
+  .mdl-cell {
+    height: 50px;
+  }
+}
+
+.demo-grid-ruler.demo-grid-ruler .mdl-cell {
+  height: 50px;
+}

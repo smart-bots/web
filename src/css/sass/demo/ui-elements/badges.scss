@@ -1,0 +1,21 @@
+.badges .ml-card-holder {
+  .material-icons {
+    font-size: 32px;
+  }
+
+  .demo-badge-2[data-badge]:after {
+    background-color: #e91e63;
+  }
+  .demo-badge-3[data-badge]:after {
+    background-color: #9c27b0;
+  }
+  .demo-badge-4[data-badge]:after {
+    background-color: #f44336;
+  }
+  .demo-badge-5[data-badge]:after {
+    background-color: #4caf50;
+  }
+  .demo-badge-6[data-badge]:after {
+    background-color: #ff9800;
+  }
+}

@@ -1,0 +1,78 @@
+<section class="todo" ng-controller="TodoController as todo">
+  <div class="mdl-color--indigo ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Todo</h3>
+      <h4 class="mdl-color-text--indigo-100 m-b-20 no-m-t w100">Manage your todo's from the dashboard or here with additional filters.</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_list_numbered</i> Filters</h3>
+          <p>This Todo APP uses the same service for managing todo's on the dashboard but with extended features.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <li ng-repeat="filter in todoService.filters track by $index">
+                  <a href ng-click="todoService.filter(filter.method)" ng-class="{ 'is-active': $index == todoService.activeFilter }" class="mdl-color-text--indigo">
+                    <i class="material-icons m-r-5 f11">sort</i>
+                    {{ filter.title }}
+                  </a>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Todo's</h2>
+          </div>
+          <div class="p-30">
+
+            <form ng-submit="todoService.saveTodo()">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input ml-todo-focus="focusTodoInput" class="mdl-textfield__input" type="text" id="todo-title" ng-model="todoService.todo.title" />
+                <label class="mdl-textfield__label" for="todo-title">Title</label>
+              </div>
+
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                {{ todoService.todo.editing ? 'Save' : 'Add' }}
+              </button>
+            </form>
+
+            <ul class="list-unstyled m-t-20" ng-show="todos.length">
+              <li ng-repeat="todo in todos | filter:todoService.todoFilter track by $id($index)" class="animate-repeat">
+                <span ng-click="todoService.toggleDone(todo)">
+                  <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                    <i class="material-icons" ng-class="{ 'mdl-color-text--green': todo.done }">done</i>
+                  </button>
+                  <span ng-class="{ strike: todo.done }">{{ todo.title }}</span>
+                </span>
+                <button class="mdl-button mdl-js-button mdl-button--icon f-right" ng-click="todoService.editTodo(todo)">
+                  <i class="material-icons f15">edit</i>
+                </button>
+              </li>
+            </ul>
+
+            <div ng-show="!todos.length">
+              <p>Well done! No more todo's.</p>
+            </div>
+
+            <button ng-click="todoService.clearCompleted()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              Clear completed todo's
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

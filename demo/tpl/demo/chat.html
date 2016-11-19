@@ -1,0 +1,68 @@
+<section class="chat" ml-chat-app>
+  <div class="mdl-color--cyan ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Chat</h3>
+      <h4 class="mdl-color-text--cyan-100 m-b-20 no-m-t w100">Give fast and easy support using this easy to use chat app.</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">chat</i> Conversations</h3>
+          <p>Pick a person to continue the conversation with.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li ng-repeat="conversation in conversations">
+                <a href ng-click="switchConversation(conversation)">
+                  <i class="material-icons m-r-5 f11">chat</i>
+                  {{ conversation.name }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Chat with {{ currentConversation.name }}</h2>
+          </div>
+          <div class="chat-container p-15">
+
+            <div class="message-wrapper" ng-class="{ me: message.me, them: !message.me }" ng-repeat="message in currentConversation.messages">
+              <img src="img/icons/ballicons/converse.svg" class="img-responsive circle-wrapper animated bounceIn mdl-shadow--0dp" ng-show="message.me">
+              <img src="img/icons/ballicons/skate.svg" class="img-responsive circle-wrapper animated bounceIn mdl-shadow--0dp" ng-hide="message.me">
+              <div class="text-wrapper animated fadeIn mdl-shadow--0dp">{{ message.text }}</div>
+              <div class="f11 mdl-color-text--grey-400 animated m-h-20 clear" ng-class="{ fadeInLeft: message.me, 'fadeInRight text-right': !message.me }">{{ message.datetime | mlChatDate }}</div>
+            </div>
+
+          </div>
+
+          <div class="chat-input-footer">
+            <div class="chat-input-container">
+              <form ng-submit="sendMessage()">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="chat-input" ng-model="message" />
+                  <label class="mdl-textfield__label" for="chat-input">Message</label>
+                </div>
+            
+                <div class="send">
+                  <button type="submit" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                    <i class="material-icons">send</i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

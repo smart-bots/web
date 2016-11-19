@@ -1,0 +1,331 @@
+<section class="advanced-elements">
+  <div class="mdl-color--pink ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Advanced elements</h3>
+      <h4 class="mdl-color-text--pink-100 m-b-20 no-m-t w100">These elements are a great addition to the default Material Design Lite (MDL) elements.</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Help</h3>
+          <p>Angular ui-select is a AngularJS-native version of Select2 and Selectize.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="https://github.com/angular-ui/ui-select">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  Angular ui-select
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Select</h2>
+          </div>
+          <div class="p-30 p-20--small" ng-controller="SelectController">
+
+            <form>
+              <div>
+                <p>Select a person</p>
+                <ui-select ng-model="person.selected" theme="select2" ng-disabled="disabled" title="Choose a person" search-enabled="false">
+                  <ui-select-match placeholder="Default select2 box">{{$select.selected.name}}</ui-select-match>
+                  <ui-select-choices repeat="person in people | filter: $select.search">
+                    <div ng-bind-html="person.name | highlight: $select.search"></div>
+                    <small>
+                      {{person.email}}
+                    </small>
+                  </ui-select-choices>
+                </ui-select>
+              </div>
+
+              <div class="m-t-40">
+                <p>Select multiple colors</p>
+                <ui-select multiple ng-model="multipleDemo.colors" theme="select2" ng-disabled="disabled" close-on-select="false" title="Choose a color">
+                  <ui-select-match placeholder="Select colors...">{{$item}}</ui-select-match>
+                  <ui-select-choices repeat="color in availableColors | filter: $select.search">
+                    {{color}}
+                  </ui-select-choices>
+                </ui-select>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Help</h3>
+          <p>pikaday-angular is a directive wraper that aims to make using Pikaday with AngularJS as simple as possible.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="https://github.com/nverba/pikaday-angular">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  Pikaday angular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Date pickers</h2>
+          </div>
+          <div class="p-30 p-20--small">
+
+            <form>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input"
+                       type="text"
+                       id="datepicker1"
+                       pikaday="datepicker1"
+                       on-select="onPikadaySelect(pikaday, date)"
+                       theme="material-lite" />
+                <label class="mdl-textfield__label" for="datepicker1">Date</label>
+              </div>
+
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input"
+                       type="text"
+                       id="datepicker2"
+                       pikaday="datepicker2"
+                       format="DD-MM-YYYY"
+                       on-select="onPikadaySelect(pikaday, date)"
+                       theme="material-lite" />
+                <label class="mdl-textfield__label" for="datepicker2">Dutch date format</label>
+              </div>
+
+              <div class="clear">
+                <div class="block f-left p-v-20 m-r-10">
+                  <i id="open-datepicker3" class="material-icons pointer">insert_invitation</i>
+                </div>
+                <div class="f-left">
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input"
+                           type="text"
+                           id="datepicker3"
+                           pikaday="datepicker3"
+                           format="DD-MM-YYYY"
+                           trigger="open-datepicker3"
+                           on-select="onPikadaySelect(pikaday, date)"
+                           disabled="disabled"
+                           theme="material-lite" />
+                    <label class="mdl-textfield__label" for="datepicker3">Open using icon</label>
+                  </div>
+                </div>
+              </div>
+
+              <label class="mdl-textfield__label static">HTML date picker</label>
+              <div class="mdl-textfield mdl-js-textfield no-p-t">
+                <input class="mdl-textfield__input" id="html-datepicker" type="date" />
+              </div>
+
+              <label class="mdl-textfield__label static">HTML month picker</label>
+              <div class="mdl-textfield mdl-js-textfield no-p-t">
+                <input class="mdl-textfield__input" id="html-monthpicker" type="month" />
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Help</h3>
+          <p>Lightweight AngularJS directive to upload files.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="https://github.com/danialfarid/angular-file-upload">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  Angular file upload
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Upload</h2>
+          </div>
+          <div class="p-30 p-20--small" ng-controller="UploadController">
+
+            <button ng-multiple="true" ngf-select ng-model="files" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+              Upload with button
+            </button>
+
+            <div class="mdl-textfield">
+              <p>Upload with form element</p>
+              <input class="mdl-textfield__input" id="upload-with-form" type="file" ngf-select ng-model="files" name="file" accept="image/*" />
+            </div>
+
+            <div>
+              <p>Upload with drag drop</p>
+
+              <div ngf-drop
+                   ngf-select
+                   ng-model="files"
+                   class="drop-box"
+                   ngf-drag-over-class="dragover"
+                   ngf-multiple="true"
+                   ngf-allow-dir="true"
+                   ngf-accept="'.jpg,.png,.gif'">Select or Drop Images here</div>
+              <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+
+            </div>
+
+            <ul ng-show="files.length > 0" class="response list-unstyled clear">
+              <li class="sel-file" ng-repeat="f in files">
+                <img ng-show="f.dataUrl" ng-src="{{f.dataUrl}}" class="thumb">
+                <span class="progress" ng-show="f.progress >= 0">
+                  <div style="width:{{f.progress}}%">{{f.progress}}%</div>
+                </span>
+                <button class="button" ng-click="f.upload.abort();f.upload.aborted=true"
+                        ng-show="f.upload != null && f.progress < 100 && !f.upload.aborted">Abort</button>
+                {{f.name}} - size: {{f.size}}B - type: {{f.type}}
+                <a ng-show="f.result" href="javascript:void(0)" ng-click="f.showDetail = !f.showDetail">details</a>
+                <div ng-show="f.showDetail">
+                  <br/>
+                  <div data-ng-show="f.result.result == null">{{f.result}}</div>
+                  <ul>
+                    <li ng-repeat="item in f.result.result">
+                      <div data-ng-show="item.name">file name: {{item.name}}</div>
+                      <div data-ng-show="item.fieldName">name: {{item.fieldName}}</div>
+                      <div data-ng-show="item.size">size on the serve: {{item.size}}</div>
+                      <div data-ng-show="item.value">value: {{item.value}}</div>
+                    </li>
+                  </ul>
+                  <div data-ng-show="f.result.requestHeaders" class="reqh">request headers: {{f.result.requestHeaders}}</div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Help</h3>
+          <p>ngWig is simple WYSIWYG editor for AngularJS that provides the basic functionality like: text styling, headings, lists, alignment.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="http://stepan.js.org/ngWig/">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  ngWig
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Text editor</h2>
+          </div>
+          <div class="p-30 p-20--small" ng-controller="TextEditorController">
+
+            <textarea ng-wig="text1" class="editor1"></textarea>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Help</h3>
+          <p>Sliders are a fairly new feature in user interfaces, and allow users to choose a value from a predetermined range by moving the thumb through the range.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="http://www.getmdl.io/components/index.html#sliders-section">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  Sliders
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Sliders</h2>
+          </div>
+          <div class="p-30 p-20--small">
+            <div>
+              <p class="p-l-20">Price</p>
+              <input slider class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="100" value="0" tabindex="0"/>
+              <div class="p-h-20 clearfix w100">
+                <div class="f-left">0</div>
+                <div class="f-right">100</div>
+              </div>
+            </div>
+            <div class="m-t-20">
+              <p class="p-l-20">Rating</p>
+              <input slider class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="5" value="2" tabindex="0"/>
+              <div class="p-h-20 clearfix w100">
+                <div class="f-left">0</div>
+                <div class="f-right">5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

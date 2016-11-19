@@ -1,0 +1,93 @@
+.gallery {
+
+  .dynamic-grid {
+    position: relative;
+    display: none;
+  }
+  .dynamic-grid.angular-grid {
+    display: block;
+  }
+  .grid {
+    position: absolute;
+    list-style: none;
+    background: #ffffff;
+    box-sizing: border-box;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+  }
+  .grid.ng-leave {
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    -o-transition: all ease 400ms;
+    transition: all ease 400ms;
+  }
+  .grid.ng-leave.ng-leave-active {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  .grid.ng-enter {
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    -o-transition: all ease 400ms;
+    transition: all ease 400ms;
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  .grid.ng-enter.ng-enter-active {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  .grid-img {
+    width: 100%;
+    vertical-align: middle;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .grid-img.img-loaded {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /** search and sort section css end ***/
+  /*** description section css ***/
+  .img-desc-wrap {
+    padding: 10px;
+  }
+  .img-desc-wrap .title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .img-desc-wrap .uploaded-date {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #999;
+  }
+  .img-desc-wrap .likes-watch-wrap {
+    margin-top: 10px;
+  }
+  .img-desc-wrap .likes,
+  .img-desc-wrap .watch {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+}

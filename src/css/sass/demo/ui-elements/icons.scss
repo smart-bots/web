@@ -1,0 +1,28 @@
+.icons {
+  .icon-holder {
+    line-height: 44px;
+    height: 44px;
+    padding:5px;
+    margin-bottom:5px;
+    cursor: pointer;
+
+    @include transition(all 0.1s);
+    @include scale(1);
+
+    &:hover {
+      background: rgba(0,0,0,0.05);
+      @include scale(1.05);
+    }
+  }
+
+  .icon-set {
+    i {
+      font-size: 38px;
+      color: #3A3A3A;
+      line-height: 38px;
+      margin-right: 5px;
+      width: 50px;
+      height: 45px;
+    }
+  }
+}

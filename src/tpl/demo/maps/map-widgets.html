@@ -1,0 +1,175 @@
+<section class="map-widgets">
+
+  <div class="mdl-color--amber ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Map widgets</h3>
+      <h4 class="mdl-color-text--amber-100 m-b-20 no-m-t w100">Maps can be embedded serving various functions.</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing" ng-controller="ClickableMapController">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">location_on</i> Locations</h3>
+          <p>Click a location to update the widget.</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li ng-repeat="marker in markers track by $index">
+                <a href ng-click="centerOn(marker.latitude, marker.longitude)">
+                  <i class="material-icons m-r-5 f11">location_on</i>
+                  {{marker.title}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Clickable locations</h2>
+          </div>
+          <div class="p-30 p-20--small" style="height:350px;">
+
+            <ui-gmap-google-map center="map.center"
+                                zoom="map.zoom">
+              <ui-gmap-markers models="markers"
+                               coords="'self'"
+                               icon="'icon'" />
+            </ui-gmap-google-map>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing" ng-controller="SearchableMapController">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">location_on</i> Search</h3>
+          <p>Search for a location to update the widget.</p>
+          <div class="m-t-30">
+
+            <form ng-submit="searchFor(query)">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="map-input" ng-model="query" />
+                <label class="mdl-textfield__label" for="map-input">Location</label>
+              </div>
+              <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                Search
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Searchable map</h2>
+          </div>
+          <div class="p-30 p-20--small" style="height:350px;">
+
+            <ui-gmap-google-map center="map.center"
+                                zoom="map.zoom"
+                                control="map.control" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing" ng-controller="ZoomableMapController">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">location_on</i> Zoom</h3>
+          <p>Use the slider to update the widget.</p>
+          <div class="m-t-30">
+
+            <input class="mdl-slider mdl-js-slider"
+                   type="range"
+                   min="0"
+                   max="10"
+                   value="5"
+                   tabindex="5"
+                   ng-model="zoom_level"
+                   ng-change="update_zoom()" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Zoomable map</h2>
+          </div>
+          <div class="p-30 p-20--small" style="height:350px;">
+
+            <ui-gmap-google-map center="map.center"
+                                zoom="map.zoom"
+                                events="map.events"
+                                control="map.control" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing" ng-controller="StyledMapController">
+
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">location_on</i> Styled</h3>
+          <p>This widget showcases a styled google map.</p>
+          <div class="m-t-30">
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Styled map</h2>
+          </div>
+          <div class="p-30 p-20--small" style="height:350px;">
+
+            <ui-gmap-google-map center="map.center"
+                                zoom="map.zoom"
+                                control="map.control"
+                                options="options" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

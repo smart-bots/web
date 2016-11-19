@@ -1,0 +1,9 @@
+<li>
+  <a class="mdl-navigation__link" ng-click="$event.preventDefault(); toggleOpen()" href>
+    <div class="absolute" style="right: 7px;">
+      <i class="material-icons"><span class="mdl-color-text--green">{{ isOpen && 'arrow_drop_down' || 'arrow_drop_up' }}</span></i>
+    </div>
+    <span ml-menu-transclude="heading"></span>
+  </a>
+  <ul class="mdl-navigation collapse" collapse="!isOpen" ng-transclude></ul>
+</li>

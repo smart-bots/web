@@ -1,0 +1,46 @@
+.ml-card-holder {
+  &.ml-card-holder-first {
+    margin-top:-81px;
+  }
+  position:relative;
+
+  @media (max-width: $screen-md-min) {
+    margin-top:0px;
+  }
+}
+
+
+.ml-list-profile {
+  .material-icons {
+    padding: 10px 10px 0 0;
+  }
+}
+
+.ml-card-horizontal {
+  flex-flow: row wrap;
+  min-height: auto;
+  height: auto;
+
+  .ml-card-horizontal--image {
+    flex: 1 auto;
+    order: 1;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .ml-card-horizontal--content {
+    flex: 3 0px;
+    order: 2;
+  }
+}
+
+//== Media overrides
+//
+@media screen and (max-width: 850px) {
+
+  .ml-card-holder.ml-card-holder-first {
+    margin-top:0px;
+  }
+}

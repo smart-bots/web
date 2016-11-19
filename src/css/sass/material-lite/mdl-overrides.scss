@@ -1,0 +1,314 @@
+//== Layout
+//
+.mdl-layout__header {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mdl-layout__header-row {
+  padding: 0 30px;
+}
+
+.mdl-layout__header-row button {
+  margin-left: 10px;
+}
+
+.mdl-layout-title {
+  font-size: 16px;
+}
+
+
+
+//== Shadow
+//
+.mdl-shadow--0dp {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.04),
+  0 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0 1px 5px 0 rgba(0, 0, 0, 0.02);
+}
+
+.mdl-shadow--1dp {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+
+//== Grid
+//
+.mdl-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+
+  &.mdl-grid-p-15 {
+    padding: 15px;
+  }
+}
+
+
+.mdl-cell {
+  padding-left: 15px;
+}
+.mdl-grid .mdl-cell:first-child {
+  padding-left: 0px;
+}
+
+
+
+//== Buttons
+//
+.mdl-button {
+  padding: 0 15px;
+}
+
+.mdl-button--block {
+  display: block;
+  width: 100%;
+}
+
+
+//== Badges
+//
+.mdl-badge.material-icons:after {
+  right: -10px;
+}
+
+
+//== Menu
+//
+.mdl-menu {
+  padding:0px;
+}
+
+
+
+//== Drawer
+//
+.mdl-layout__drawer {
+  border:none;
+}
+.mdl-layout__drawer .mdl-navigation {
+  padding:0px;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  display: flex !important;
+  flex-direction: row;
+  line-height: 20px;
+  padding: 13px 20px;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+
+//== Table
+//
+.mdl-data-table {
+  border:0px;
+  display:block;
+  overflow: auto;
+
+  thead {
+    background: #FAFAFA;
+  }
+
+  tbody tr {
+    @include transition(none);
+  }
+
+  tbody tr:hover {
+    background-color: rgba(77, 208, 225, 0.1);
+  }
+
+  td {
+    border-top: 1px solid rgba(0,0,0,.04);
+    border-bottom: 1px solid rgba(0,0,0,.04);
+    text-align: left;
+  }
+
+}
+
+
+//== tooltips
+//
+.mdl-tooltip.is-active {
+  transform: scale(1);
+}
+
+
+
+//== Forms
+//
+
+.mdl-textfield__input {
+  outline: none;
+}
+.mdl-textfield {
+  width: auto;
+  display: block;
+}
+.mdl-textfield__label {
+  top: 20px;
+}
+
+.mdl-data-table th .mdl-data-table__select {
+  position:inherit;
+  left:auto;
+  bottom: auto;
+}
+
+
+//== Cards
+//
+.mdl-card__title {
+  padding: 16px 20px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.mdl-card {
+  width: auto;
+  border-radius: 3px;
+  overflow: visible;
+  z-index: auto;
+}
+
+.mdl-card__menu.mdl-card__menu-left {
+  right: auto;
+  left: 16px;
+}
+
+.mdl-card__supporting-text {
+  width: 100%;
+}
+
+.mdl-card__title-icon {
+  img {
+    height: 35px;
+    margin-right: 10px;
+  }
+  .mdl-card__title-text {
+    line-height: 35px;
+  }
+}
+
+.mdl-card__media-image {
+  bottom: -40px;
+  position: absolute;
+  width: 80px;
+  left: 20px;
+}
+.mdl-card__media-button {
+  position: absolute;
+  right: 30px;
+  bottom: -25px;
+}
+
+.mdl-card__text {
+  padding:20px;
+}
+
+.mdl-card__actions {
+  display: flex;
+
+  & > i {
+    padding: 6px 10px;
+  }
+}
+
+//== Ripple
+//
+
+.mdl-button__ripple-container {
+  z-index: -1;
+}
+.mdl-ripple {
+  background: rgba(0, 0, 0, 0.37);
+}
+
+//== Demo
+//
+.demo-drawer {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.demo-navigation .mdl-navigation__link .material-icons {
+  margin-right: 10px;
+  font-size: 18px;
+  color: rgb(186, 186, 186) !important;
+}
+
+.demo-avatar-dropdown {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 10px 7px 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+.demo-avatar-dropdown span {
+  line-height: 30px;
+}
+
+.demo-header-color {
+  background: #b0bec5;
+}
+
+//== Drawer button
+//
+
+.mdl-layout__drawer-button i {
+  color: #000;
+}
+
+//== Progress
+//
+
+.mdl-progress {
+  width: auto;
+}
+
+
+//== Media overrides
+//
+@media screen and (max-width: 1024px) {
+  .mdl-layout__header-row {
+    margin-left: 30px;
+    height: 64px;
+  }
+
+  .mdl-layout__content {
+    width: 100%;
+  }
+
+  .mdl-layout__header .mdl-layout__drawer-button {
+    margin: 10px;
+  }
+
+}
+
+@media (max-width: 839px) {
+  .mdl-cell {
+    padding-left: 0px;
+  }
+}
+
+
+@media (max-width: 479px) {
+  .mdl-grid {
+    padding: 0px;
+  }
+  .mdl-cell {
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+
+  div[class^="mdl-cell--"], div[class*=" mdl-cell--"] {
+    width: 100% !important;
+  }
+
+}
+

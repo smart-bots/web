@@ -1,0 +1,163 @@
+
+$navHeight: 64px;
+
+.ml-chat-widget {
+  .mdl-card__menu {
+    top: 10px;
+  }
+}
+
+.chat {
+  .mdl-card {
+    position: relative;
+  }
+
+  .chat-container {
+    padding-bottom: 70px;
+  }
+
+  .chat-input-footer, .chat-input {
+    background: #fafafa;
+  }
+
+  .chat-input-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 20px 20px;
+  }
+
+  .chat-input-container {
+    form {
+      margin-right: 45px;
+    }
+
+    .send {
+      right: 0;
+      bottom: -5px;
+
+      .mdl-button--icon {
+        width: 40px;
+        height: 40px;
+        .material-icons {
+          font-size: 25px;
+          width: 29px;
+        }
+      }
+    }
+  }
+}
+
+.chat-container {
+  background-color: #f1f1f1;
+  min-height: 390px;
+  background-size: contain;
+}
+
+.chat-input-container {
+  height:50px;
+  position: relative;
+
+  .send {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+  }
+}
+
+.chat-input {
+  height:50px;
+  border: none;
+  width: calc(100% - #{$navHeight});
+  padding: 15px;
+  resize: none;
+  overflow: scroll;
+  font-weight: 300;
+  font-size:16px;
+
+  &:focus {
+    outline: none;
+  }
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
+}
+
+
+.message-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  padding-bottom: 20px;
+  padding-top: 5px;
+
+  .circle-wrapper {
+    background: white;
+    border-radius: 50%;
+    padding:2px;
+    height: 42px;
+    width: 42px;
+  }
+
+  .text-wrapper {
+    padding: ($navHeight - ($navHeight/1.5)) / 2;
+    min-height: $navHeight/1.5;
+    width: calc(100% - 65px);
+    margin: 0 ($navHeight - ($navHeight/1.5)) / 2;
+    box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.3);
+    border-radius: 2px;
+    font-weight: 300;
+    position: relative;
+    opacity: 0;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+  }
+
+  &.them {
+    .circle-wrapper, .text-wrapper {
+      float: left;
+      color: white;
+    }
+
+    .text-wrapper {
+      background: #D2D2D2;
+
+      &:before {
+        border-width: 0 10px 10px 0;
+        border-color: transparent #D2D2D2 transparent transparent;
+        position: absolute;
+        top: 0;
+        left: -9px;
+      }
+    }
+  }
+
+  &.me {
+    .circle-wrapper, .text-wrapper {
+      float: right;
+      color: black;
+    }
+
+    .text-wrapper {
+      background: white;
+
+      &:before {
+        border-width: 10px 10px 0 0;
+        border-color: white transparent transparent transparent;
+        position: absolute;
+        top: 0;
+        right: -9px;
+      }
+    }
+  }
+}
