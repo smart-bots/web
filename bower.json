@@ -6,7 +6,7 @@
     "h2dvnnet <h2dvnnet@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "http://smart-bots.xyz",
+  "homepage": "https://github.com/smart-bots/web",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,24 +16,24 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.5",
-    "angular-route": "~1.4.5",
-    "angular-animate": "~1.4.5",
-    "angular-sanitize": "~1.4.5",
-    "angular-ui-select": "0.13",
-    "angular-local-storage": "0.2.3",
-    "angular-google-maps": "~2.2.1",
-    "angular-simple-logger": ">=0.0.1",
-    "angulargrid": "master",
-    "ng-file-upload": "9.1.2",
-    "ng-wig": "2.2.1",
-    "pikaday-angular": "2.0.0",
-    "moment": "2.10.6",
-    "c3-angular": "~0.7.1",
-    "font-awesome": "4.4.0",
-    "animate.css": "3.4.0",
-    "material-design-lite": "1.0.6",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-select": "^0.19.6",
+    "angular-local-storage": "^0.5.2",
+    "angular-google-maps": "^2.4.0",
+    "angular-simple-logger": "^0.1.7",
+    "angulargrid": "^0.6.3",
+    "ng-file-upload": "^12.2.13",
+    "ng-wig": "^3.0.7",
+    "pikaday-angular": "^2.0.0",
+    "moment": "^2.10.6",
+    "c3-angular": "^1.3.1",
+    "font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2",
+    "material-design-lite": "^1.2.1",
     "ng-table": "~0.8.3",
-    "sass-flex-mixin": "~1.0.3"
+    "sass-flex-mixin": "^1.0.3"
   }
 }
