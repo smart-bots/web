@@ -1,0 +1,79 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.top-header {
+    background-color: #2D2B41;
+}
+.top-header.bs-docs-nav {
+    border-color: #222132;
+}
+
+.bs-docs-nav .navbar-nav > .active > a,
+.bs-docs-nav .navbar-nav > .active > a:hover {
+    background-color: #222132;
+}
+
+.bs-docs-nav .navbar-toggle {
+    border-color: #222132;
+}
+.bs-docs-nav .navbar-toggle:hover {
+    background-color: #383550;
+    border-color: #222132;
+}
+
+.navbar-nav {
+    margin: 0 -15px;
+
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        margin: 0;
+    }
+}
+
+.bs-docs-nav .navbar-collapse {
+    border-color: transparent;
+}
+
+.bs-header {
+    background: url('../img/bg_header.jpg') repeat-x;
+}
+
+.bs-docs-home, .bs-header {
+    color: #c8c8e6;
+}
+
+.highlight pre {
+    white-space: pre;
+}
+
+.section-heading {
+    padding-top: 80px;
+}
+.section-heading.first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bs-footer {
+    background-color: #2C2C44;
+    color: #575781;
+}
+.bs-footer a {
+    color: #575781;
+}
+
+body {
+    position: relative;
+    padding-top: 50px;
+}
